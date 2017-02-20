@@ -1,11 +1,10 @@
 Package: c4dougbot2000
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A Connect 4 Player Plugin
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Doug Ashton
+Maintainer: Doug Ashton <douglas.j.ashton@gmail.com>
+Description: Adds the mighty dougbot2000 to the c4game.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

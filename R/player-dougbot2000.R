@@ -21,10 +21,23 @@ dougbot2000 <- R6Class("dougbot2000",
     name = "character",
 
     make_move = function(board, lastMove) {
-      return(sample(1:ncol(board), 1))
+      private$moveCnt <- private$moveCnt + 1
+      # Cyclic repeat the sequence
+      return(private$moveSeq[(private$moveCnt-1) %% length(private$moveSeq) + 1])
     },
 
     rejected = function(board, lastMove) {
       make_move(board, lastMove)
-    })
+    },
+
+    initialize=function(moveSeq = c(1,3,4,1,5,6,2,7), name = "dougbotkill") {
+      private$moveSeq <- moveSeq
+      private$moveCnt <- 0
+      self$name <- name
+    }),
+
+  private = list(
+    moveSeq = "numeric",
+    moveCnt = "numeric"
+  )
 )

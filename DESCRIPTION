@@ -8,7 +8,9 @@ Description: Adds the mighty dougbot2000 to the c4game.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: R6
+Imports: R6,
+    Rcpp
 RoxygenNote: 6.0.1
 Roxygen: list(markdown = TRUE)
 Suggests: testthat
+LinkingTo: Rcpp

@@ -72,7 +72,7 @@ IntegerVector get_top(NumericMatrix board) {
       k = i*n + j;
       j ++;
     }
-    x(i) = j;
+    x(i) = j-1;
   }
 
   return(x);

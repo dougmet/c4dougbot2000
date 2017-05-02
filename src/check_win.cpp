@@ -77,3 +77,23 @@ IntegerVector get_top(NumericMatrix board) {
 
   return(x);
 }
+
+// [[Rcpp::export]]
+IntegerVector get_top_lengths(NumericMatrix board, int target) {
+  IntegerVector top = get_top(board);
+  int m = board.ncol();
+  int n = board.nrow();
+  IntegerMatrix ln = get_lengths(board, target);
+  IntegerVector top_ln(m);
+  for (int i=0; i<m; i++) {
+    if(top(i) < 1) {
+      top_ln(i) =  NA_INTEGER;
+    }
+    else {
+      IntegerVector x = ln(i*n + top(i) - 1, _);
+      top_ln(i) = max(x);
+    }
+
+  }
+  return(top_ln);
+}

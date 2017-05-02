@@ -2,6 +2,7 @@
 
 export(check_win)
 export(dougbot2000)
+export(dougbot2001)
 importFrom(R6,R6Class)
 importFrom(Rcpp,sourceCpp)
 useDynLib(c4dougbot2000)

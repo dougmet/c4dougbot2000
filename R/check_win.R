@@ -25,8 +25,12 @@ check_win <- function(board, target = 1, n = 4) {
   ln <- get_lengths(board, target = target)
 
   top <- get_top(board)
+  top[top<1] <- NA
 
   rows <- top + nrow(board)*(1:ncol(board) - 1)
 
-  apply(ln[rows, ], 1, function(x) any(x >= n))
+
+  #win <- apply(ln[rows, ], 1, function(x) isTRUE(any(x >= n)))
+
+  #win
 }

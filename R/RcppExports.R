@@ -13,3 +13,7 @@ get_top <- function(board) {
     .Call('c4dougbot2000_get_top', PACKAGE = 'c4dougbot2000', board)
 }
 
+get_top_lengths <- function(board, target) {
+    .Call('c4dougbot2000_get_top_lengths', PACKAGE = 'c4dougbot2000', board, target)
+}
+

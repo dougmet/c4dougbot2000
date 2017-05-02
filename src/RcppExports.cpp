@@ -39,3 +39,15 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// get_top_lengths
+IntegerVector get_top_lengths(NumericMatrix board, int target);
+RcppExport SEXP c4dougbot2000_get_top_lengths(SEXP boardSEXP, SEXP targetSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type board(boardSEXP);
+    Rcpp::traits::input_parameter< int >::type target(targetSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_top_lengths(board, target));
+    return rcpp_result_gen;
+END_RCPP
+}

@@ -13,7 +13,7 @@
 #' @importFrom R6 R6Class
 #'
 #' @examples
-#' dougbot2001$new(name="dougbotkill")
+#' dougbot2001$new(name="dougbotkill", player = 1)
 #'
 dougbot2001 <- R6Class("dougbot2001",
 

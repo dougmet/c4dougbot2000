@@ -22,7 +22,7 @@ The unbeatable dougbot2001 c4 player!
 }
 
 \examples{
-dougbot2001$new(name="dougbotkill")
+dougbot2001$new(name="dougbotkill", player = 1)
 
 }
 \keyword{datasets}

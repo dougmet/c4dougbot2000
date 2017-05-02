@@ -28,7 +28,7 @@ dougbot2001 <- R6Class("dougbot2001",
 
       # Can you win?
       top_ln_player <- get_top_lengths(board, target = private$player)
-      if (any(top_ln_player >= 4)) {
+      if (any(top_ln_player >= 4, na.rm = TRUE)) {
         i <- which(top_ln_player == max(top_ln_player, na.rm = TRUE))
         return(i[sample.int(length(i), size = 1)])
       }
